@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 600px;
+    height: 400px;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* DRAWING THE LETTERS */
+/* THE LETTER E */
+.e {
+    width: 245px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 35px 150px;
+    grid-template-rows: 35px 77.5px 35px 77.5px 35px;
+    position: relative;
+}
+.e .top {
+    width: 150px;
+    height: 35px;
+    background-color: #101820FF;
+    grid-area: 1 / 2 / 1 / 2;
+}
+.e .mid {
+    width: 150px;
+    height: 35px;
+    background-color: #101820FF;
+    grid-area: 3 / 2 / 3 / 2;
+}
+.e .bot {
+    width: 150px;
+    height: 35px;
+    background-color: #101820FF;
+    grid-area: 5 / 2 / 5 / 2;
+}
+.e .left {
+    width: 35px;
+    height: 260px;
+    background-color: #101820FF;
+}
+/* THE LETTER L */
+.l {
+    width: 245px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 35px 150px;
+    grid-template-rows: 225px 35px;
+    position: relative;
+}
+.l .bot {
+    width: 150px;
+    height: 35px;
+    background-color: #101820FF;
+    grid-area: 2 / 2 / 2 / 2;
+}
+.l .left {
+    width: 35px;
+    height: 260px;
+    background-color: #101820FF;
+}
+/* THE END OF THE DRAWING  */
+
+/* DRAWING THE SMALL SQUARE  */
+.e .square {
+    width: 25px;
+    height: 25px;
+    background-color: #FEE715FF;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    animation-name: e-square;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+.l .square {
+    width: 25px;
+    height: 25px;
+    background-color: #FEE715FF;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    opacity: 0;
+    animation-name: l-square;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+/* THE END OF THE SQUARE'S DRAWING */
+
+/* THE SQUARE'S ANIMATION IN THE LETTER E */
+@keyframes e-square {
+    11.11% {
+        transform: translateX(-150px);
+        -webkit-transform: translateX(-150px);
+        -moz-transform: translateX(-150px);
+        -ms-transform: translateX(-150px);
+        -o-transform: translateX(-150px);
+        opacity: 1;
+}
+    22.22% {
+        transform: translateX(-150px) translateY(112.5px);
+        -webkit-transform: translateX(-150px) translateY(112.5px);
+        -moz-transform: translateX(-150px) translateY(112.5px);
+        -ms-transform: translateX(-150px) translateY(112.5px);
+        -o-transform: translateX(-150px) translateY(112.5px);
+        opacity: 1;
+}
+    33.33% {
+        transform: translateX(0) translateY(112.5px);
+        -webkit-transform: translateX(0) translateY(112.5px);
+        -moz-transform: translateX(0) translateY(112.5px);
+        -ms-transform: translateX(0) translateY(112.5px);
+        -o-transform: translateX(0) translateY(112.5px);
+        opacity: 1;
+}
+    44.44% {
+        transform: translateX(-150px) translateY(112.5px);
+        -webkit-transform: translateX(-150px) translateY(112.5px);
+        -moz-transform: translateX(-150px) translateY(112.5px);
+        -ms-transform: translateX(-150px) translateY(112.5px);
+        -o-transform: translateX(-150px) translateY(112.5px);
+        opacity: 1;
+}
+    55.55% {
+        transform: translateX(-150px) translateY(225px);
+        -webkit-transform: translateX(-150px) translateY(225px);
+        -moz-transform: translateX(-150px) translateY(225px);
+        -ms-transform: translateX(-150px) translateY(225px);
+        -o-transform: translateX(-150px) translateY(225px);
+        opacity: 1;
+}
+    66.66%{
+        transform: translateX(0) translateY(225px);
+        -webkit-transform: translateX(0) translateY(225px);
+        -moz-transform: translateX(0) translateY(225px);
+        -ms-transform: translateX(0) translateY(225px);
+        -o-transform: translateX(0) translateY(225px);
+        opacity: 0;
+}
+    100% {
+        transform: translateX(0) translateY(225px);
+        -webkit-transform: translateX(0) translateY(225px);
+        -moz-transform: translateX(0) translateY(225px);
+        -ms-transform: translateX(0) translateY(225px);
+        -o-transform: translateX(0) translateY(225px);
+        opacity: 0;
+    }
+}
+/* THE END OF THE ANIMATION IN THE E LETTER */
+
+/* THE SQUARE'S ANIMATION IN THE LETTER L */
+@keyframes l-square {
+    0% {
+        opacity: 1;
+    }
+    22.22% {
+        opacity: 1;
+        transform: translateY(225px);
+        -webkit-transform: translateY(225px);
+        -moz-transform: translateY(225px);
+        -ms-transform: translateY(225px);
+        -o-transform: translateY(225px);
+}
+    33.33% {
+        opacity: 0;
+        transform: translateY(225px) translateX(150px);
+        -webkit-transform: translateY(225px) translateX(150px);
+        -moz-transform: translateY(225px) translateX(150px);
+        -ms-transform: translateY(225px) translateX(150px);
+        -o-transform: translateY(225px) translateX(150px);
+}
+    100% {
+        opacity: 0;
+        transform: translateY(225px) translateX(150px);
+        -webkit-transform: translateY(225px) translateX(150px);
+        -moz-transform: translateY(225px) translateX(150px);
+        -ms-transform: translateY(225px) translateX(150px);
+        -o-transform: translateY(225px) translateX(150px);
+    }
+}
